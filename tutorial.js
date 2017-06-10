@@ -19,7 +19,7 @@ jsonDisplay.style.backgroundColor = '#F6F6F6'
 jsonDisplay.style.color = '#2B2B2B'
 jsonDisplay.style.maxWidth = '500px'
 jsonDisplay.style.fontSize = '24px'
-jsonDisplay.style.marginBottom = '5px'
+jsonDisplay.style.marginTop = '15px'
 jsonDisplay.style.fontFamily = 'Avenir'
 jsonDisplay.style.padding = '5px'
 jsonDisplay.style.boxSizing = 'border-box'
@@ -40,8 +40,8 @@ createAnimationButton.innerHTML = 'Generate keyframe'
 // Add our DOM elements to the page
 var appContainer = document.querySelector('#generate-keyframe-animation-tutorial') || document.body
 appContainer.appendChild(userMessage)
-appContainer.appendChild(jsonDisplay)
 appContainer.appendChild(createAnimationButton)
+appContainer.appendChild(jsonDisplay)
 
 // A little function that gives three random colors
 function createRandomColors () {
