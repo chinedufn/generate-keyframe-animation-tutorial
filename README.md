@@ -7,8 +7,8 @@ http://chinedufn.com/dynamic-css-keyframes-in-javascript
 ## To run locally
 
 ```
-git clone https://github.com/chinedufn/dynamic-css-keyframes-tutorial
-cd dynamic-css-keyframes-tutorial
+git clone https://github.com/chinedufn/generate-keyframe-animation-tutorial
+cd generate-keyframe-animation-tutorial
 npm install
 npm run start
 ```
