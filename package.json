@@ -1,0 +1,39 @@
+{
+  "name": "generate-keyframe-animation-tutorial",
+  "version": "0.0.1",
+  "description": "A tutorial on generating CSS keyframes during runtime",
+  "main": "tutorial.js",
+  "scripts": {
+    "start": "budo --open --live --host=127.0.0.1 tutorial.js",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinedufn/generate-keyframe-animation-tutorial.git"
+  },
+  "keywords": [
+    "keyframe",
+    "css",
+    "animation",
+    "js",
+    "json",
+    "generate",
+    "create",
+    "animate"
+  ],
+  "author": "Chinedu Francis Nwafili <frankie.nwafili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chinedufn/generate-keyframe-animation-tutorial/issues"
+  },
+  "homepage": "https://github.com/chinedufn/generate-keyframe-animation-tutorial#readme",
+  "devDependencies": {
+    "budo": "^10.0.3",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "create-keyframe": "^1.0.2",
+    "insert-styles": "^1.2.1",
+    "stringify-object": "^3.2.0"
+  }
+}
