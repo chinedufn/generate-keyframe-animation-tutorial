@@ -14,19 +14,19 @@ var insertCSS = require('insert-styles')
 // keyframe's JSON
 var jsonDisplay = document.createElement('div')
 jsonDisplay.style.whiteSpace = 'pre'
-jsonDisplay.style.border = 'solid black 1px'
-jsonDisplay.style.backgroundColor = '#00007d'
-jsonDisplay.style.color = '#ffff00'
+jsonDisplay.style.borderRadius = '5px'
+jsonDisplay.style.backgroundColor = '#F6F6F6'
+jsonDisplay.style.color = '#2B2B2B'
 jsonDisplay.style.maxWidth = '500px'
 jsonDisplay.style.fontSize = '24px'
 jsonDisplay.style.marginBottom = '5px'
-jsonDisplay.style.fontFamily = 'Helvetica Neue'
+jsonDisplay.style.fontFamily = 'Avenir'
 jsonDisplay.style.padding = '5px'
 jsonDisplay.style.boxSizing = 'border-box'
 
 // Create the message that we will animate
 var userMessage = document.createElement('span')
-userMessage.style.fontSize = '36px'
+userMessage.style.fontSize = '48px'
 userMessage.style.display = 'block'
 userMessage.innerHTML = 'Great Job!'
 
@@ -58,6 +58,8 @@ function createRandomColors () {
 function generateKeyframe () {
   var randomColors = createRandomColors()
 
+  var shakeDistance = Number((Math.random() * 70).toFixed(0)) + 30
+
   // Create a new keyframe CSS keyframe
   // and insert it into the page
   var cssKeyframe
@@ -65,13 +67,12 @@ function generateKeyframe () {
     0: {
       color: 'black'
     },
+    20: { transform: `translateX(${shakeDistance}px)` },
+    60: { transform: `translateX(-${shakeDistance}px)` },
     75: {
-      color: `rgba(${randomColors[0]}, ${randomColors[1]}, ${randomColors[2]}, ${randomColors[3]})`,
-      fontSize: '48px'
+      color: `rgba(${randomColors[0]}, ${randomColors[1]}, ${randomColors[2]}, ${randomColors[3]})`
     },
-    100: {
-      color: 'black'
-    }
+    100: { color: 'black' }
   }
   var keyframeObj = createKeyframe(cssKeyframe)
   insertCSS(keyframeObj.css, {id: 'animaton-tutorial-keyframe'})
